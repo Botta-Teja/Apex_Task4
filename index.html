@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <input type="text" id="searchInput" placeholder=" 🔍 Search for products..." />
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Filters</h3>
+      <label>Category</label>
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="home">Home</option>
+      </select>
+
+      <label>Sort By</label>
+      <select id="sortSelect">
+        <option value="default">Default</option>
+        <option value="asc">Price: Low to High</option>
+        <option value="desc">Price: High to Low</option>
+      </select>
+
+      <button id="undoBtn">Undo Filters</button>
+
+      <hr style="margin: 20px 0;" />
+
+      <div class="cart-section">
+        <h4>🛒 Cart (<span id="cartCount">0</span>)</h4>
+        <ul id="cartItems" class="list-section"></ul>
+      </div>
+
+      <div class="wishlist-section">
+        <h4>❤️ Wishlist (<span id="wishlistCount">0</span>)</h4>
+        <ul id="wishlistItems" class="list-section"></ul>
+      </div>
+    </aside>
+
+    <main>
+      <div class="product-grid" id="productGrid"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
